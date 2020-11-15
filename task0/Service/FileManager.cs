@@ -5,7 +5,7 @@ using task0.IService;
 
 namespace task0.Service
 {
-    abstract class FileManager:IFileManager
+    public class FileManager : IFileManager
     {
         public void SavePlayList(Media media)
         {

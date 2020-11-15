@@ -5,7 +5,7 @@ using task0.Contracts;
 
 namespace task0
 {
-    abstract class Media : IMedia
+    public abstract class Media : IMedia
     {   
         public string Name { get; private set; }
         public string Path { get; private set; }
