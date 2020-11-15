@@ -17,6 +17,14 @@ namespace task0
             Path = path;
             Volume = volume;
         }
+        public void OpenFile(Media media)
+        {
 
+        }
+
+        public void DeleteFile(Media media)
+        {
+            
+        }
     }
 }

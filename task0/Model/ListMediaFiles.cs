@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+using task0.Contracts;
 
 namespace task0
 {
-    class ListMediaFiles
+    class ListMediaFiles : ISearch
     {
         public ListMediaFiles()
         {
@@ -14,27 +15,10 @@ namespace task0
         }
 
         public ObservableCollection<Media> MediaFiles { get; private set; }
-        //public ObservableCollection<Media> MediaFiles
-        //{
-        //    get
-        //    {
-        //        return _mediaFiles;
-        //    }
-        //    set
-        //    {
-        //        _mediaFiles = value;
 
-        //        OnPropertyChanged("MediaFiles");
-        //    }
-        //}
-
-        //public event PropertyChangedEventHandler PropertyChanged;
-
-        //protected void OnPropertyChanged(string propertyName)
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
-
-
+        public string Search(ObservableCollection<Media> mediaFiles)
+        {            
+            return null;
+        }
     }
 }

@@ -4,9 +4,10 @@ using System.Text;
 
 namespace task0.Contracts
 {
-    interface IMedia
+    interface IOperationsPlayer
     {
-        void OpenFile(Media media);
-        void DeleteFile(Media media);
+        void Play();
+        void Pause();
+        void Stop();
     }
 }

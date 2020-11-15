@@ -4,9 +4,9 @@ using System.Text;
 
 namespace task0.Contracts
 {
-    interface IMedia
+    interface IOperationsViewing
     {
-        void OpenFile(Media media);
-        void DeleteFile(Media media);
+        void Next();
+        void Previous();
     }
 }
