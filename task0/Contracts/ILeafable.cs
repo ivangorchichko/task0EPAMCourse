@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task0.Contracts
 {
-    interface IOperationsViewing
+    interface ILeafable
     {
         void Next();
         void Previous();

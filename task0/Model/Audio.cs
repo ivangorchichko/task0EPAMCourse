@@ -5,15 +5,24 @@ using task0.Contracts;
 
 namespace task0
 {
-    sealed class Audio : Media, IOperationsViewing, IOperationsPlayer
+    sealed class Audio : Media, ILeafable, IPlayBack
     {
-        public byte BitRate { get; private set; }
-        public DateTime Time { get; private set; }
-        private Audio(string name, string path, double volume, byte bitRate, DateTime time)
+        public byte BitRate { get; set; }
+        public TimeSpan Duration { get; set; }
+
+        public Audio(string name, string path, double volume)
             : base(name, path, volume)
         {
-            BitRate = bitRate;
-            Time = time;
+          
+        }
+
+        public override string ShowMediaInfo()
+        {
+            return "";
+        }
+        public override bool IsUnique()
+        {
+            return true;
         }
 
         public void Next()
@@ -23,7 +32,7 @@ namespace task0
 
         public void Previous()
         {
-            
+           
         }
 
         public void Play()
@@ -38,7 +47,9 @@ namespace task0
 
         public void Stop()
         {
-            
+           
         }
+
+       
     }
 }

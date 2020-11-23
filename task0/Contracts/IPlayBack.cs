@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task0.Contracts
 {
-    interface IOperationsPlayer
+    interface IPlayBack 
     {
         void Play();
         void Pause();

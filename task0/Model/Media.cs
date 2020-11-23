@@ -5,26 +5,22 @@ using task0.Contracts;
 
 namespace task0
 {
-    public abstract class Media : IMedia
+    public abstract class Media 
     {   
-        public string Name { get; private set; }
-        public string Path { get; private set; }
-        public double Volume { get; private set; }
+        public string Name { get; }
+        public string Path { get; }
+        public double Size { get; }
 
-        protected Media(string name, string path, double volume)
+        protected Media(string name, string path, double size)
         {
             Name = name;
             Path = path;
-            Volume = volume;
+            Size = size;
         }
-        public void OpenFile(Media media)
+        public virtual string ShowMediaInfo()
         {
-
+            return "";
         }
-
-        public void DeleteFile(Media media)
-        {
-            
-        }
+        public abstract bool IsUnique();
     }
 }

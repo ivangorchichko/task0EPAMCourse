@@ -5,30 +5,24 @@ using task0.Contracts;
 
 namespace task0
 {
-    sealed class Video:Media, IOperationsPlayer, IOperationsViewing
+    sealed class Video:Media, IPlayBack, ILeafable
     {
-        public string Permission { get; private set; }
-        public DateTime Time { get; private set; }
-        private Video(string name, string path, double volume, string permission, DateTime time)
+        private const string DefaultCodek = "Mpg"; 
+        public string Extention { get; set; }
+        public DateTime Time { get; set; }
+        
+        public Video(string name, string path, double volume)
             : base(name, path, volume)
         {
-            Permission = permission;
-            Time = time;
+          
         }
-
-        public void Play()
+        public override string ShowMediaInfo()
         {
-            
+            return "";
         }
-
-        public void Pause()
+        public override bool IsUnique()
         {
-            
-        }
-
-        public void Stop()
-        {
-            
+            return true;
         }
 
         public void Next()
@@ -40,5 +34,21 @@ namespace task0
         {
             
         }
+        public void Play()
+        {
+            
+        }
+
+        public void Pause()
+        {
+           
+        }
+
+        public void Stop()
+        {
+           
+        }
+
+       
     }
 }

@@ -7,18 +7,20 @@ using task0.Contracts;
 
 namespace task0
 {
-    class ListMediaFiles : ISearch
+    class ListMediaFiles 
     {
-        public ListMediaFiles()
+        private static ObservableCollection<Media> _mediaFiles;
+        private ListMediaFiles()
         {
-            MediaFiles = new ObservableCollection<Media>();
-        }
-
-        public ObservableCollection<Media> MediaFiles { get; private set; }
-
-        public string Search(ObservableCollection<Media> mediaFiles)
-        {            
-            return null;
+            
+        }   
+        public static ObservableCollection<Media> GetCollection()
+        {
+            if(_mediaFiles==null)
+            {
+                _mediaFiles = new ObservableCollection<Media>();
+            }
+            return _mediaFiles; 
         }
     }
 }

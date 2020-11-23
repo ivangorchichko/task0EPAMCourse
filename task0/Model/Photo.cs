@@ -5,14 +5,15 @@ using task0.Contracts;
 
 namespace task0
 {
-    sealed class Photo:Media, IOperationsViewing
+    sealed class Photo:Media, ILeafable
     {
-        public string Permission { get; private set; }
-        private Photo(string name, string path,double volume, string permission )
+
+        public string Extention { get; }
+        public Photo(string name, string path, double volume)
             : base(name, path, volume)
         {
-            Permission = permission;            
         }
+           
         public void Next()
         {
 
@@ -20,6 +21,16 @@ namespace task0
         public void Previous()
         {
 
+        }
+
+        public override string ShowMediaInfo()
+        {
+            return "";
+        }
+
+        public override bool IsUnique()
+        {
+            return true;
         }
     }
 }

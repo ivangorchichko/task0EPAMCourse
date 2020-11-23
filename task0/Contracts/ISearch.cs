@@ -7,6 +7,6 @@ namespace task0.Contracts
 {
     interface ISearch
     {
-        string Search(ObservableCollection<Media> mediaFiles);
+        string Search(string name);
     }
 }

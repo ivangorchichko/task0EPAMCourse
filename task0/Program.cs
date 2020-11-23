@@ -1,4 +1,7 @@
 ﻿using System;
+using task0.Contracts;
+
+using task0.Service;
 
 namespace task0
 {
@@ -6,7 +9,7 @@ namespace task0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
